@@ -1,4 +1,4 @@
-#### Flutter GetX 实现 ChatGPT 简单聊天界面
+### Flutter GetX 实现 ChatGPT 简单聊天界面
 
 **Flutter 是一款跨平台的移动应用开发框架，而 GetX 是 Flutter 中一种简单易用的状态管理和路由管理工具。本篇我们将使用 Flutter 和 GetX 实现一个简单的聊天界面，以与 ChatGPT 进行交互。**
 
@@ -121,7 +121,7 @@ class ChatState {
 }
 ```
 
-在这个类中，存储了聊天应用程序的状态信息，包括消息、发送者、请求状态和历史消息列表。requestStatus()方法用于更新状态以反映正在发送消息的状态，responseStatus()方法用于更新状态以反映接收到的消息。
+在这个类中，存储了聊天应用程序的状态信息，包括消息、发送者、请求状态和历史消息列表。`requestStatus()`方法用于更新状态以反映正在发送消息的状态，`responseStatus()`方法用于更新状态以反映接收到的消息。
 
 
 最后，我们定义了`ChatPage`类，它继承自`StatelessWidget`，它将用于展示聊天对话框。以下是`ChatPage`类的代码：
@@ -217,7 +217,7 @@ class ChatPage extends StatelessWidget {
 }
 ```
 
-该类包含一个ChatLogic实例和一个ChatState实例。在build()方法中，我们使用GetBuilder包装整个聊天界面。这个界面包括一个消息列表和一个输入框，用户可以在其中输入消息并发送给聊天机器人。ListView.builder用于显示历史消息，TextField和IconButton用于接收用户输入并发送消息。在发送消息之前，会检查当前状态是否为请求状态，以避免重复发送请求。
+该类包含一个`ChatLogic`实例和一个`ChatState`实例。在`build()`方法中，我们使用`GetBuilder`包装整个聊天界面。这个界面包括一个消息列表和一个输入框，用户可以在其中输入消息并发送给聊天机器人。`ListView.builder`用于显示历史消息，`TextField`和`IconButton`用于接收用户输入并发送消息。在发送消息之前，会检查当前状态是否为请求状态，以避免重复发送请求。
 
 
 到这里一个简单的聊天功能就完成了，运行下看看效果吧：
